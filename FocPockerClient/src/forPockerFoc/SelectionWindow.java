@@ -8,8 +8,11 @@ import java.awt.Toolkit;
 
 import javax.swing.*;
 
+import valueObjects.ReadAndWriter;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class SelectionWindow extends JFrame {
 
@@ -26,16 +29,20 @@ public class SelectionWindow extends JFrame {
 	private final JPanel imgPanel;
 	private final JPanel buttonPanel;
 	
+	//comonication with server
+	private ReadAndWriter raw;
+	
 	public SelectionWindow(){
 		super("Welcome to FOC Poker");
+		this.raw = new ReadAndWriter("", 0);
 		
 		// logInButton & signInButton Layout and EventHandler
 		logInButton = new JButton("Log in");
 		logInButton.setBackground(Color.GRAY);
 		logInButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				@SuppressWarnings("unused")//bekause its a Window
-				LogInWindow liw = new LogInWindow();
+				raw.sendAText("logIn");
+				new LogInWindow();
 				dispose();
 			}
 		});
@@ -45,8 +52,8 @@ public class SelectionWindow extends JFrame {
 		signInButton.setBackground(Color.GRAY);
 		signInButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				@SuppressWarnings("unused")// bekause its a Window
-				SignInWindow sIW = new SignInWindow();
+				raw.sendAText("signIn");
+				new SignInWindow();
 				dispose();
 			}
 		});
@@ -77,6 +84,13 @@ public class SelectionWindow extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(windowVisible);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		try{
+			String message;
+			message = raw.getAText();
+			System.out.println(message);
+		}catch(IOException e2){
+			System.err.println("fuck geht nicht");
+		}
 	}
 	
 	public void paint(Graphics g){

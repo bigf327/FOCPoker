@@ -1,6 +1,7 @@
 	//server mu�� das machen
+
 //	public boolean playerNamePossible(String playername){
-//		//TODO wie komm ich an die Liste vom Server (client kennt nur common)!
+//		
 //		//String file = ("/Users/fabianRedecker/Dropbox/Studium FR & CS/Prog2 Projekt/Projektdateien/workspace fabian/Grafics/TestArea/PlayerList.txt");
 //		String file = "";
 //		try {
@@ -79,12 +80,8 @@ package EventHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.Socket;
 import javax.swing.JOptionPane;
+import valueObjects.ReadAndWriter;
 import forPockerFoc.SignInWindow;
 import forPockerFoc.SuccessWindow;
 
@@ -102,64 +99,17 @@ public class SignInHandler implements ActionListener {
 	private String password;
 	private int controlCounter = 0;
 	
-	//CLient
-	private Socket client;
-	//Streams
-	private PrintStream out; 
-	private BufferedReader in;
+	private ReadAndWriter raw;
+	
+
 	
 	public SignInHandler(SignInWindow frame){
 		this.currentSignIn = frame;
 		this.name = this.currentSignIn.getName();
-		this.password = this.currentSignIn.getPassword();	
+		this.password = this.currentSignIn.getPassword();
+		this.raw = new ReadAndWriter("", 0);
 		
 	}
-	
-	private void initClient(String host, int port){
-		@SuppressWarnings("unused")//wait for server welcome
-		String textFromserver;
-		try {
-			this.client = new Socket(host, port);
-			System.out.println("client auf server");
-		} catch (IOException e) {
-			System.err.println("ERROR while conection with server" + "\n" +  e.getMessage());
-			e.printStackTrace();
-		}
-		
-	
-	}
-	
-	private void initStreams(){
-		String serverMassage = null;
-	
-		//output Stream
-		try {
-			this.out = new PrintStream(this.client.getOutputStream());
-			System.out.println("out Ready");
-		} catch (IOException e) {
-			System.err.println("ERROR while init OUTPUTSTREAM");
-			e.printStackTrace();
-		}
-		//input Stream
-		
-		try {
-			this.in = new BufferedReader(new InputStreamReader(this.client.getInputStream()));
-			System.out.println("in Ready");
-		} catch (IOException e) {
-			System.err.println("ERROR while init INPUTSTRAM");			
-			e.printStackTrace();
-		}
-		try {
-			serverMassage = this.in.readLine();
-			System.out.println(serverMassage);
-		} catch (IOException e) {
-			System.err.println("ERROR while reading serverMesssage");
-			e.printStackTrace();
-		}
-		
-	}
-	
-
 	
 	@SuppressWarnings("deprecation")
 	public void checkPlayerInput(){
@@ -190,35 +140,26 @@ public class SignInHandler implements ActionListener {
 		
 		
 	}
-	
 
-	
-	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		//conection to server
-		this.initClient("localHost", 4342);
 		checkPlayerInput();
 		System.out.println(name + ";" + chipNumber + ";" + password);
 		System.out.println(controlCounter);
 		// if Name and (Password & passwordFieldRepeat) && PlayerName is available was correct signed in Write in a list
 		if(controlCounter >= 2){
-			System.out.println("test1");
-			
-			//initialize Streams
-			this.initStreams();
-			
-
-			
-			//send SignIn player data so server
-			
 			System.out.println(name + ";" + valueOfChipnumber + ";" + password);
-			this.out.println(name + ";" + valueOfChipnumber + ";" + password);
+			raw.sendAText(name);
+			raw.sendAText(valueOfChipnumber);
+			raw.sendAText(password);
 			this.currentSignIn.dispose();
 			new SuccessWindow("Success", "You have been registered by FOC Pocker", "OK");
 	
 		}	
 	}
+
+
 }
 
 
