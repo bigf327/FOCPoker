@@ -12,38 +12,15 @@ public class SignInManager implements Runnable {
 	
 	private final int PORT = 4342;
 	private ServerSocket serverSocket;
-	private Socket clientSocket;
+	private Socket client;
 	private BufferedReader in;
 	private PrintStream out;
 	
 	public SignInManager(){
-//		//initialize Streams
-//		this.initStreams();
-//		
-//		//initialize Server
-//		this.initServer();
-//		
-//		//wait for Clients
-//		this.acceptClients();
 		
 	}
 	
-	public void initStreams(){
-		//output Stream
-		try {
-			this.out = new PrintStream(this.clientSocket.getOutputStream());
-		} catch (IOException e) {
-			System.err.println("ERROR while init OUTPUTSTREAM");
-			e.printStackTrace();
-		}
-		//input Stream
-		try {
-			this.in = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream()));
-		} catch (IOException e) {
-			System.err.println("ERROR while init INPUTSTRAM");			
-			e.printStackTrace();
-		}
-	}
+
 	
 	public void initServer(){
 		
@@ -54,6 +31,7 @@ public class SignInManager implements Runnable {
 			System.out.println("Host: " + iA.getHostName());
 			System.out.println("Serverport : " + PORT + "\n" + "Is ready for connection");
 			
+			
 		} catch (IOException e) {
 			System.err.println("Es gab einen Fehler bei init des Servers");
 			e.printStackTrace();
@@ -62,20 +40,59 @@ public class SignInManager implements Runnable {
 	
 	public void acceptClients(){
 		
-		try {
-			while(true) {
-			clientSocket = serverSocket.accept();
+		while(true){
+			
+			Socket clientSocket = null;
+			
+			try {
+				clientSocket = serverSocket.accept();
+				this.initStreams(clientSocket);
+			} catch (IOException e) {
+				System.err.println("ERROR while accepting clients" + "\n" + e.getMessage());
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			System.out.println("ERROR while accepting clients" + "\n" + e.getMessage());
+			finally{
+				if(clientSocket != null){
+					try {
+						clientSocket.close();
+					} catch (IOException e) {
+						System.err.println("ERROR Clinetsocket cant be closed" + "\n" + e.getMessage());
+						e.printStackTrace();
+					}
+				}
+			}
+			
 		}
-		this.out.println("SignInManager ready for data");
-		
+	}
 	
+	
+	
+	public void initStreams(Socket clientSocket){
+		client = clientSocket;
+		//output Stream
+		try {
+			this.out = new PrintStream(this.client.getOutputStream());
+			System.out.println("server out ready");
+		} catch (IOException e) {
+			System.err.println("ERROR while init OUTPUTSTREAM");
+			e.printStackTrace();
+		}
+		//input Stream
+		try {
+			this.in = new BufferedReader(new InputStreamReader(this.client.getInputStream()));
+			System.out.println("server in ready");
+		} catch (IOException e) {
+			System.err.println("ERROR while init INPUTSTRAM");			
+			e.printStackTrace();
+		}
 		
+		
+		sendAMessage();
+		getAMessage();
 	}
 	
 	public void getAMessage(){
+		
 		String test = "nich geklappt";
 		try {
 			test = this.in.readLine();
@@ -86,23 +103,26 @@ public class SignInManager implements Runnable {
 		System.out.println(test);
 	}
 	
+	public void sendAMessage(){
+		this.out.println("SignInManager ready for data");
+	}
+	
 
 
 	@Override
 	public void run() {
 		initServer();
 		acceptClients();
-		initStreams();
-		getAMessage();
+	
 		
-
+	
 	}
 
 	public static void main(String[] args) {
 		Runnable r = new SignInManager();
 		Thread t = new Thread(r);
 		t.start();
-
+	
 	}
 
 }

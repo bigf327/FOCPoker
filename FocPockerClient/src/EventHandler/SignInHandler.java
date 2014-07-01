@@ -1,4 +1,4 @@
-	//server muß das machen
+	//server mu�� das machen
 //	public boolean playerNamePossible(String playername){
 //		//TODO wie komm ich an die Liste vom Server (client kennt nur common)!
 //		//String file = ("/Users/fabianRedecker/Dropbox/Studium FR & CS/Prog2 Projekt/Projektdateien/workspace fabian/Grafics/TestArea/PlayerList.txt");
@@ -131,7 +131,7 @@ public class SignInHandler implements ActionListener {
 	
 	private void initStreams(){
 		String serverMassage = null;
-		
+	
 		//output Stream
 		try {
 			this.out = new PrintStream(this.client.getOutputStream());
@@ -141,6 +141,7 @@ public class SignInHandler implements ActionListener {
 			e.printStackTrace();
 		}
 		//input Stream
+		
 		try {
 			this.in = new BufferedReader(new InputStreamReader(this.client.getInputStream()));
 			System.out.println("in Ready");
@@ -155,6 +156,7 @@ public class SignInHandler implements ActionListener {
 			System.err.println("ERROR while reading serverMesssage");
 			e.printStackTrace();
 		}
+		
 	}
 	
 
@@ -194,21 +196,27 @@ public class SignInHandler implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//conection to server
+		this.initClient("localHost", 4342);
 		checkPlayerInput();
 		System.out.println(name + ";" + chipNumber + ";" + password);
 		System.out.println(controlCounter);
 		// if Name and (Password & passwordFieldRepeat) && PlayerName is available was correct signed in Write in a list
 		if(controlCounter >= 2){
-			//conection to server
-			this.initClient("localHost", 4342);
+			System.out.println("test1");
 			
 			//initialize Streams
 			this.initStreams();
 			
+
+			
 			//send SignIn player data so server
+			
 			System.out.println(name + ";" + valueOfChipnumber + ";" + password);
 			this.out.println(name + ";" + valueOfChipnumber + ";" + password);
+			this.currentSignIn.dispose();
 			new SuccessWindow("Success", "You have been registered by FOC Pocker", "OK");
+	
 		}	
 	}
 }
