@@ -1,7 +1,1 @@
 Fabian;2500;fabian
-Oke;2500;oke
-Christoph;2500;christoph
-Dirk;2500;dirk
-Sebastian;2500;ha
-Peter;2500;peter
-Tim;2500;tim

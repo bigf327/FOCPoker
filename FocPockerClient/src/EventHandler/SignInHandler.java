@@ -1,86 +1,12 @@
-	//server mu�� das machen
 
-//	public boolean playerNamePossible(String playername){
-//		
-//		//String file = ("/Users/fabianRedecker/Dropbox/Studium FR & CS/Prog2 Projekt/Projektdateien/workspace fabian/Grafics/TestArea/PlayerList.txt");
-//		String file = "";
-//		try {
-//			file = ("/data/PlayerList.txt");
-//			
-//		} catch (Exception e) {
-//			System.err.println("FAIL while reading Playerlist.txt" + e.getMessage());
-//		}
-//		String row;
-//		String [] split = new String[1];
-//	    ArrayList<String> playerNameList = new ArrayList<String>();
-//	    int playerFoundCounter = 0;
-//		
-//	    //read in Playerdata an split after Playername
-//	    try {
-//			BufferedReader br = new BufferedReader(new FileReader(file));
-//
-//			while ((row = br.readLine()) != null) {
-//				split = row.split(";"); // Auslesen der Textdatei, Zeilenumbruch erfolgt nach jedem ";"
-//			    	for (int i = 0; i < split.length; i++) {
-//			    		playerNameList.add(split[i]);
-//			    	}
-//			    }
-//			    
-//			// Stream wird geschlossen
-//			br.close();
-//		} catch (Exception e) {
-//			System.err.println("ERROR while reading txtFile");
-//		}
-//	    
-//	    //check if playername(param) ist allready in the list if yes playerFoundCounter++
-//	    for (int i=0; i< playerNameList.size(); i++){
-//	    	if(playerNameList.get(i).equals(playername)){
-//	    		playerFoundCounter++;
-//	    	}
-//	    }
-//		
-//	    if(playerFoundCounter == 0){
-//	    	return true;
-//	    }else{
-//	    	JOptionPane.showMessageDialog(null, "The Playername is not available", "Playername ERROR",JOptionPane.WARNING_MESSAGE);
-//	    
-//	    	return false;
-//	    }	    
-//	}
-	
-	
-	
-//	public void writeIn(){
-//		@SuppressWarnings("unused")
-//		String stringId = null;
-//		String stringChipNumber = null;
-//		
-//		try {
-//			stringId = String.valueOf(id);
-//			stringChipNumber = String.valueOf(chipNumber);
-//		} catch (Exception e) {
-//			JOptionPane.showMessageDialog(null, "StingId or StringChipNumber was not able to parse", "Parse Error",JOptionPane.WARNING_MESSAGE);
-//		}
-//		
-//		try {
-//			//BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/fabianRedecker/Dropbox/Studium FR & CS/Prog2 Projekt/Projektdateien/workspace fabian/Grafics/TestArea/PlayerList.txt", true));
-//			BufferedWriter bw = new BufferedWriter(new FileWriter("/data/PlayerList.txt", true));
-//			bw.write(name + ";" + stringChipNumber + ";" + password);
-//			bw.newLine();
-//			bw.close();
-//		} catch (IOException e2) {
-//			JOptionPane.showMessageDialog(null, "Error while Writing to .txt", "Writing Error",JOptionPane.WARNING_MESSAGE);
-//			System.exit(0);
-//			new SelectionWindow();
-//			e2.printStackTrace();
-//		}
-//	
-//	}
 package EventHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
+
 import valueObjects.ReadAndWriter;
 import forPockerFoc.SignInWindow;
 import forPockerFoc.SuccessWindow;
@@ -98,16 +24,25 @@ public class SignInHandler implements ActionListener {
 	private String valueOfChipnumber;
 	private String password;
 	private int controlCounter = 0;
-	
 	private ReadAndWriter raw;
 	
 
 	
-	public SignInHandler(SignInWindow frame){
+	public SignInHandler(SignInWindow frame, ReadAndWriter raw){
 		this.currentSignIn = frame;
 		this.name = this.currentSignIn.getName();
 		this.password = this.currentSignIn.getPassword();
-		this.raw = new ReadAndWriter("", 0);
+		this.raw = raw;
+		//get welcome from PokerServer
+		
+		try {
+			String hallo = this.raw.getAText();
+			System.out.println(hallo);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
@@ -143,6 +78,7 @@ public class SignInHandler implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		String playerNamePossible = "";
 		//conection to server
 		checkPlayerInput();
 		System.out.println(name + ";" + chipNumber + ";" + password);
@@ -150,11 +86,24 @@ public class SignInHandler implements ActionListener {
 		// if Name and (Password & passwordFieldRepeat) && PlayerName is available was correct signed in Write in a list
 		if(controlCounter >= 2){
 			System.out.println(name + ";" + valueOfChipnumber + ";" + password);
-			raw.sendAText(name);
-			raw.sendAText(valueOfChipnumber);
-			raw.sendAText(password);
-			this.currentSignIn.dispose();
-			new SuccessWindow("Success", "You have been registered by FOC Pocker", "OK");
+			String playerData = name + ";" + valueOfChipnumber + ";" + password;
+			//send PlayerData to Server 
+			raw.sendAText(playerData);
+			try {
+				//get information from server above the sign in data
+				playerNamePossible = raw.getAText();
+			} catch (IOException e1) {
+				System.err.println("SignInHandler: ERROR could not get playerNamePossible");
+				e1.printStackTrace();
+			}
+			//if Playername is possible SuccessWindow else warning and chose a new one
+			if(playerNamePossible.equals("ok")){
+				this.currentSignIn.dispose();
+				new SuccessWindow("Success", "You have been registered by FOC Pocker", "OK");
+			}else if(playerNamePossible.equals("ERROR")){
+				JOptionPane.showMessageDialog(null, "The selected Playername is not possible", "Playername EROOR",JOptionPane.WARNING_MESSAGE);
+				currentSignIn.repaint();
+			}	
 	
 		}	
 	}

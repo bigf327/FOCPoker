@@ -42,8 +42,15 @@ public class SelectionWindow extends JFrame {
 		logInButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				raw.sendAText("logIn");
-				new LogInWindow();
+				new LogInWindow(raw);
 				dispose();
+				try {
+					String a = raw.getAText();
+					System.out.println(a);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		logInButton.setPreferredSize(new Dimension(250, 50));
@@ -53,7 +60,7 @@ public class SelectionWindow extends JFrame {
 		signInButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				raw.sendAText("signIn");
-				new SignInWindow();
+				new SignInWindow(raw);
 				dispose();
 			}
 		});
@@ -89,7 +96,7 @@ public class SelectionWindow extends JFrame {
 			message = raw.getAText();
 			System.out.println(message);
 		}catch(IOException e2){
-			System.err.println("fuck geht nicht");
+			System.err.println("SelectionWindow: ERROR read server welcome");
 		}
 	}
 	

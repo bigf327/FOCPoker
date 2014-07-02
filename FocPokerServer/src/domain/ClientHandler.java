@@ -10,12 +10,12 @@ public class ClientHandler implements Runnable {
 	
 	private Socket client;
 	private BufferedReader in;
-	@SuppressWarnings("unused")// I will unse soon
 	private PrintStream out;
 	
 	public ClientHandler(final Socket aClient){
 		this.client = aClient;
 		this.initStreams(aClient);
+		this.out.println("Server: Welcome to Poker FOC");
 	}
 	
 
@@ -52,31 +52,41 @@ public class ClientHandler implements Runnable {
 				System.err.println(e.getMessage());
 				continue;
 			}
-
-			// Eingabe bearbeiten:
+			
+			// work with input
 			if(input == null){
 				input = "exit";
 			}
 			else if(input.equals("signIn")){
+				String playerData;
 				System.out.println(input);
+				this.out.println("Server: You choose Sign in");	
 				try {
-					System.out.println(this.in.ready());
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				try {
-					String name = this.in.readLine();
-					String chips = this.in.readLine();
-					String password = this.in.readLine();
-					System.out.println(name + chips + password);
+					playerData = this.in.readLine();
+					System.out.println(playerData);
+					SignInManager sim = new SignInManager(playerData);
+					if(sim.playerNamePossible == false){
+						this.out.println("ok");
+					}else{
+						this.out.println("ERROR");
+					}
 				} catch (IOException e) {
-					System.err.println("ClientHandler: Cant get Sign in data");
+					System.err.println("clientHandler: ERROR in signIn");
 					e.printStackTrace();
-				}	
+				}
+				
 			}
 			else if(input.equals("logIn")){
 				System.out.println(input);
+				this.out.println("Server: You choose LogIn");
+				String playerData;
+				try {
+					playerData = this.in.readLine();
+					System.out.println(playerData);
+				} catch (IOException e) {
+					System.err.println("clientHandler: ERROR in LogIn");
+					e.printStackTrace();
+				}
 				
 			}
 		
@@ -89,7 +99,7 @@ public class ClientHandler implements Runnable {
 		try {
 			this.client.close();
 		} catch (IOException e) {
-			System.err.println("ERROR was not able to close conection after a succes commonication");
+			System.err.println("ClientHandler: ERROR was not able to close conection after a succes commonication");
 			e.printStackTrace();
 		}
 	}

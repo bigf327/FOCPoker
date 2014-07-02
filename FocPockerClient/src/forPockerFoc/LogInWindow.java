@@ -8,9 +8,9 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 
-
 import javax.swing.*;
 
+import valueObjects.ReadAndWriter;
 import EventHandler.LogInHandler;
 
 public class LogInWindow extends JFrame {
@@ -35,7 +35,7 @@ public class LogInWindow extends JFrame {
 	// Font
 	private Font myFont;
 	
-	public LogInWindow(){
+	public LogInWindow(ReadAndWriter raw){
 		super("FOC Poker Log In");
 		//init Content
 		myFont = new Font("Arial", Font.BOLD, 12);
@@ -52,7 +52,7 @@ public class LogInWindow extends JFrame {
 		passwordLabel.setForeground(Color.WHITE);
 		passwordField = new JPasswordField();
 		logInButton = new JButton("Log In");
-		logInButton.addActionListener(new LogInHandler(this));
+		logInButton.addActionListener(new LogInHandler(this, raw));
 		
 		//init Panels
 		picPanel = new JPanel();

@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
+import valueObjects.ReadAndWriter;
 import EventHandler.SignInHandler;
 
 public class SignInWindow extends JFrame {
@@ -40,13 +41,16 @@ public class SignInWindow extends JFrame {
 	//Content Panel
 	private JPanel content = new JPanel();
 	
+	private ReadAndWriter raw;
+	
 	//Constructor
-	public SignInWindow(){
+	public SignInWindow(ReadAndWriter raw){
 		super("Sign In, enjoy FOC Poker");
+		this.raw = raw;
 		this.id++;
 		this.setJComponentTransparent();
 		this.fillPanel();
-		createButton.addActionListener(new SignInHandler(this));
+		createButton.addActionListener(new SignInHandler(this, this.raw));
 		this.init(true);
 	}
 	
@@ -130,9 +134,7 @@ public class SignInWindow extends JFrame {
 		}
 
 		
-		public static void main(String[] args) {
-			new SignInWindow();
-		}
+	
 		
 		
 		
