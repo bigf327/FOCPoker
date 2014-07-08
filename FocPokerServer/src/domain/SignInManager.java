@@ -140,6 +140,7 @@ public class SignInManager {
 				try {
 					line = br.readLine();
 					this.PLAYERLIST += line;
+					System.out.println(PLAYERLIST);
 					if(PLAYERLIST.contains(playerName)){
 						playerFoundCounter++;
 					}	
