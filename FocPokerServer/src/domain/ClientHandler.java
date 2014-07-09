@@ -65,7 +65,8 @@ public class ClientHandler implements Runnable {
 					playerData = this.in.readLine();
 					System.out.println(playerData);
 					SignInManager sim = new SignInManager(playerData);
-					if(sim.playerNamePossible == false){
+					System.out.println("ClientHandler:" + sim.playerNamePossible);
+					if(sim.playerNamePossible == true){
 						this.out.println("ok");
 					}else{
 						this.out.println("ERROR");

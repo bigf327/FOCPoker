@@ -8,6 +8,7 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 import valueObjects.ReadAndWriter;
+import forPockerFoc.SelectionWindow;
 import forPockerFoc.SignInWindow;
 import forPockerFoc.SuccessWindow;
 
@@ -81,12 +82,10 @@ public class SignInHandler implements ActionListener {
 		String playerNamePossible = "";
 		//conection to server
 		checkPlayerInput();
-		System.out.println(name + ";" + chipNumber + ";" + password);
-		System.out.println(controlCounter);
 		// if Name and (Password & passwordFieldRepeat) && PlayerName is available was correct signed in Write in a list
 		if(controlCounter >= 2){
-			System.out.println(name + ";" + valueOfChipnumber + ";" + password);
 			String playerData = name + ";" + valueOfChipnumber + ";" + password;
+			System.out.println(playerData);
 			//send PlayerData to Server 
 			raw.sendAText(playerData);
 			try {
@@ -102,7 +101,8 @@ public class SignInHandler implements ActionListener {
 				new SuccessWindow("Success", "You have been registered by FOC Pocker", "OK");
 			}else if(playerNamePossible.equals("ERROR")){
 				JOptionPane.showMessageDialog(null, "The selected Playername is not possible", "Playername EROOR",JOptionPane.WARNING_MESSAGE);
-				currentSignIn.repaint();
+				currentSignIn.dispose();
+				new SelectionWindow();
 			}	
 	
 		}	

@@ -1,8 +1,11 @@
+Jenny;2500;jenny
 Fabian;2500;fabian
+Stefan;2500;stefan
 Oke;2500;oke
-Christoph;2500;christoph
-Dirk;2500;dirk
-Sebastian;2500;ha
-Peter;2500;peter
+Christoph;2500;christophStefan;2500;stafan
 Tim;2500;tim
-da;2500;da
+HuHu;2500;ha
+Ofi;2500;ne
+Stefan;2500;stefan
+Rahl;2500;da
+Bob;2500;bo

@@ -1,4 +1,4 @@
-	//server mu�� das machen
+	//server mu������ das machen
 
 //	public boolean playerNamePossible(String playername){
 //		
@@ -90,6 +90,7 @@ public class SignInManager {
 	private String chipsString;
 	//private int chips;
 	private String playerPassword;
+	@SuppressWarnings("unused")//only use for check if a Playername is possible
 	private String PLAYERLIST;
 	public boolean playerNamePossible = false;
 	
@@ -106,10 +107,13 @@ public class SignInManager {
 		//set ClassAtributes from playerData
 		this.playername = playerDataUnsort[0];
 		this.chipsString = playerDataUnsort[1];
-		this.playerPassword = playerDataUnsort[2];	
-		this.checkPlayername(playername);
-		if(checkPlayername(playername) == true){
-			this.writeIn();
+		this.playerPassword = playerDataUnsort[2];
+		System.out.println("SignInManager:" + playername );
+		System.out.println("SignInManager:" + chipsString );
+		System.out.println("SignInManager:" + playerPassword);
+		
+		if(checkPlayername(this.playername) == true){
+			writeIn();
 			playerNamePossible = true;
 		}
 	}
@@ -140,17 +144,21 @@ public class SignInManager {
 				try {
 					line = br.readLine();
 					this.PLAYERLIST += line;
-					if(PLAYERLIST.contains(playerName)){
-						playerFoundCounter++;
+					if (line != null){
+						if (line.contains(playerName)){
+							playerFoundCounter++;
+						}
 					}	
-					System.out.println(PLAYERLIST);
+					
+					System.out.println(line);
 				} catch (IOException e) {
 					System.err
 							.println("SignInManager: ERROR while reading PLAYERLIST");
 					e.printStackTrace();
 				}
-
+			
 			} while (line != null);
+			
 			try {
 				br.close();
 			} catch (IOException e) {
