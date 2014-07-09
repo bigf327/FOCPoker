@@ -1,0 +1,50 @@
+package domain;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class LogInManager {
+	String playerName;
+	String playerPassword;
+	
+	
+	public LogInManager(String playerLogInData){
+		String[] playerDataUnsort = playerLogInData.split(";");
+		//if there are more than 3 Arguments they is a wrong input
+		if(playerDataUnsort.length != 2){
+			throw new IllegalArgumentException("SignInManager: ERROR playerData has to be three Arguments(playername, chips, password)");
+		}
+		playerName = playerDataUnsort[0];
+		playerPassword = playerDataUnsort[1];
+		System.out.println("LogInManager: " + playerName);
+		System.out.println("LogInManager: " + playerPassword);
+	}
+	
+	public void checkPlayerData(){
+		
+		int check = 0;
+		try{
+			BufferedReader br = new BufferedReader(new FileReader("bin/data/PlayerList.txt"));
+
+            String sZeile;
+            while ((sZeile = br.readLine()) != null) {
+                if(sZeile.contains(playerName) && sZeile.contains(playerPassword)){
+					new SuccessWindow("Success", "Log in was successful", "OK");
+					//TODO dispose LogInWIndow
+                	check++;
+                	//TODO close window start Game
+                }
+                
+            }
+            if(check == 0){
+            	JOptionPane.showMessageDialog(null, "Log in was not successful please try again!", "Log In ERROR",JOptionPane.WARNING_MESSAGE);
+            }    
+            br.close();
+        }
+        catch(IOException e1){
+        	JOptionPane.showMessageDialog(null, "Fail while checkPlayerData", "Read Data ERROR",JOptionPane.WARNING_MESSAGE);
+            e1.printStackTrace();
+        }
+	}
+
+}

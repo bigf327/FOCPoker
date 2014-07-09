@@ -108,9 +108,9 @@ public class SignInManager {
 		this.playername = playerDataUnsort[0];
 		this.chipsString = playerDataUnsort[1];
 		this.playerPassword = playerDataUnsort[2];
-		System.out.println("SignInManager:" + playername );
-		System.out.println("SignInManager:" + chipsString );
-		System.out.println("SignInManager:" + playerPassword);
+//		System.out.println("SignInManager:" + playername );
+//		System.out.println("SignInManager:" + chipsString );
+//		System.out.println("SignInManager:" + playerPassword);
 		
 		if(checkPlayername(this.playername) == true){
 			writeIn();

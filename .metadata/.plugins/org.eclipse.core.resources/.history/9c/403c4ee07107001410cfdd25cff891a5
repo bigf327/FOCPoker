@@ -1,0 +1,14 @@
+package domain;
+
+public class LogInManager {
+	
+	
+	public LogInManager(String playerLogInData){
+		String[] playerDataUnsort = playerLogInData.split(";");
+		//if there are more than 3 Arguments they is a wrong input
+		if(playerDataUnsort.length != 2){
+			throw new IllegalArgumentException("SignInManager: ERROR playerData has to be three Arguments(playername, chips, password)");
+		}
+	}
+
+}

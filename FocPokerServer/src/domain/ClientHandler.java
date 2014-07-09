@@ -63,9 +63,7 @@ public class ClientHandler implements Runnable {
 				this.out.println("Server: You choose Sign in");	
 				try {
 					playerData = this.in.readLine();
-					System.out.println(playerData);
 					SignInManager sim = new SignInManager(playerData);
-					System.out.println("ClientHandler:" + sim.playerNamePossible);
 					if(sim.playerNamePossible == true){
 						this.out.println("ok");
 					}else{
@@ -80,10 +78,16 @@ public class ClientHandler implements Runnable {
 			else if(input.equals("logIn")){
 				System.out.println(input);
 				this.out.println("Server: You choose LogIn");
-				String playerData;
+				String playerLogInData;
 				try {
-					playerData = this.in.readLine();
-					System.out.println(playerData);
+					playerLogInData = this.in.readLine();
+					System.out.println(playerLogInData);
+					LogInManager lim = new LogInManager(playerLogInData);
+					if(lim.isLogInDataFound() == true){
+						this.out.println("ok");
+					}else{
+						this.out.println("ERROR");
+					}
 				} catch (IOException e) {
 					System.err.println("clientHandler: ERROR in LogIn");
 					e.printStackTrace();

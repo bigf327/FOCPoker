@@ -1,4 +1,4 @@
-	//Server muß das machen
+	//Server mu�� das machen
 //	//get Playerlist.txt
 //	public void getPlayerList(){
 //		//init PLAYERLIST by get Playerlist.txt
@@ -44,6 +44,7 @@ package EventHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
@@ -69,7 +70,7 @@ public class LogInHandler implements ActionListener {
 
 	//get entered Playername & Password
 	@SuppressWarnings("deprecation")
-	public void getPlayerData(){
+	public boolean getPlayerData(){
 		//counter for playername & password has run
 	
 		//try get Playername
@@ -94,17 +95,36 @@ public class LogInHandler implements ActionListener {
 			JOptionPane.showMessageDialog(null, "Error in Field Password", "Input ERROR",JOptionPane.WARNING_MESSAGE);
 		}
 		
+		if (controlCounter >=2){
+			return true;
+		}
+		return false;
+		
 	}
 	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		this.getPlayerData();
-		if(controlCounter >=2){
+		String answerFromServer = "";
+		
+		if(this.getPlayerData() == true){
 			System.out.println(playerName + ";" + playerPassword);
 			raw.sendAText(playerName + ";" + playerPassword);
-			currentLogIn.dispose();
-			new SuccessWindow("Success", "You have been loged in", "OK");
+			try {
+				answerFromServer = raw.getAText();
+			} catch (IOException e1) {
+				System.err.println("LogInHandler: ERROR get answerFromServer");
+				e1.printStackTrace();
+			}
+			switch (answerFromServer){
+			
+			case "ok":		currentLogIn.dispose();
+							new SuccessWindow("Success", "You have been loged in", "OK");
+							break;
+			case "ERROR":	currentLogIn.dispose();	
+							JOptionPane.showMessageDialog(null, "Error was not able to find your sighned in Player Data", "Input ERROR",JOptionPane.WARNING_MESSAGE);
+			}
+			
 		}
 	}
 }

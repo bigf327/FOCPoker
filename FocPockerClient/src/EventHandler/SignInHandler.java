@@ -85,7 +85,7 @@ public class SignInHandler implements ActionListener {
 		// if Name and (Password & passwordFieldRepeat) && PlayerName is available was correct signed in Write in a list
 		if(controlCounter >= 2){
 			String playerData = name + ";" + valueOfChipnumber + ";" + password;
-			System.out.println(playerData);
+			//System.out.println(playerData);
 			//send PlayerData to Server 
 			raw.sendAText(playerData);
 			try {
