@@ -109,7 +109,7 @@ public class LogInHandler implements ActionListener {
 		String answerFromServer = "";
 		
 		if(this.getPlayerData() == true){
-//			System.out.println(playerName + ";" + playerPassword);
+			System.out.println(playerName + ";" + playerPassword);
 			raw.sendAText(playerName + ";" + playerPassword);
 			try {
 				answerFromServer = raw.getAText();
