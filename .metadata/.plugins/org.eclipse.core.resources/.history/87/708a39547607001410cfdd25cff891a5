@@ -32,14 +32,13 @@ public class LogInManager {
 
             String sZeile;
             while ((sZeile = br.readLine()) != null) {
-            	System.out.println(sZeile);
                 if(sZeile.contains(playerName) && sZeile.contains(playerPassword)){
-                	
                 	return true;
                 }
-               
+                if((sZeile = br.readLine()) == null){
+                	br.close();
+                }   
             }
-            br.close();
         }
         catch(IOException e1){
         	System.err.println("LogInManager: ERROR while reading Playerlist.txt");

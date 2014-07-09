@@ -50,7 +50,6 @@ import javax.swing.JOptionPane;
 
 import valueObjects.ReadAndWriter;
 import forPockerFoc.LogInWindow;
-import forPockerFoc.SelectionWindow;
 import forPockerFoc.SuccessWindow;
 
 
@@ -124,7 +123,6 @@ public class LogInHandler implements ActionListener {
 							break;
 			case "ERROR":	currentLogIn.dispose();	
 							JOptionPane.showMessageDialog(null, "Error was not able to find your sighned in Player Data", "Input ERROR",JOptionPane.WARNING_MESSAGE);
-							new SelectionWindow();
 			}
 			
 		}

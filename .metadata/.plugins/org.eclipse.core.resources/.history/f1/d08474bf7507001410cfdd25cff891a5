@@ -83,7 +83,6 @@ public class ClientHandler implements Runnable {
 					playerLogInData = this.in.readLine();
 					System.out.println(playerLogInData);
 					LogInManager lim = new LogInManager(playerLogInData);
-					System.out.println("ClientHandler: " + lim.isLogInDataFound());
 					if(lim.isLogInDataFound() == true){
 						this.out.println("ok");
 					}else{

@@ -33,7 +33,7 @@ public class LogInManager {
             String sZeile;
             while ((sZeile = br.readLine()) != null) {
             	System.out.println(sZeile);
-                if(sZeile.contains(playerName) && sZeile.contains(playerPassword)){
+                if(playerName.contains(sZeile) && playerPassword.contains(sZeile)){
                 	
                 	return true;
                 }
