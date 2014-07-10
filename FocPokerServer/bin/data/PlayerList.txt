@@ -1,3 +1,0 @@
-Rabian;2500;kla
-Fabian;2500;ha
-Walter;2500;walter
