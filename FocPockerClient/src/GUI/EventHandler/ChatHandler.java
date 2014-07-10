@@ -1,10 +1,10 @@
-package EventHandler;
+package GUI.EventHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import valueObjects.Player;
-import forPockerFoc.MainWindow;
+import GUI.gameWindows.MainWindow;
 
 public class ChatHandler implements ActionListener {
 	

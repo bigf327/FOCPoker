@@ -1,5 +1,5 @@
 
-package EventHandler;
+package GUI.EventHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,9 +8,9 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 import valueObjects.ReadAndWriter;
-import forPockerFoc.SelectionWindow;
-import forPockerFoc.SignInWindow;
-import forPockerFoc.SuccessWindow;
+import GUI.gameWindows.SelectionWindow;
+import GUI.gameWindows.SignInWindow;
+import GUI.gameWindows.SuccessWindow;
 
 public class SignInHandler implements ActionListener {
 	

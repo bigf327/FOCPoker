@@ -138,7 +138,7 @@ public class RoundManager {
 		}
 	}
 	
-	public void playerStatus() {
+	public void playerStatus(char selection) {
 		endOfRound();
 		if (lastPlayerCheck()) {
 			roundEnd = true;
@@ -165,7 +165,6 @@ public class RoundManager {
 						+ "\n\tr\t-\tRaise"
 						+ "\n\tf\t-\tFold"
 						+ "\n\th\t-\tHelp|Rules");
-				char selection = Eingabe.readChar();
 				switch(selection) {
 					case 'c':	check();
 								playerStatus();
@@ -231,14 +230,13 @@ public class RoundManager {
 		this.pM.nextPlayer();
 	}
 	
-	public void raiseOrBet() {
+	public void raiseOrBet(char selection) {
 		int playerBefore = this.pM.playerBefore();
 		if (this.pM.getPlayerList()[playerBefore].getActualBet() > 0) {
 			System.out.println("\tWhat to do?"
 					+ "\n\td\t-\tDouble actual call"
 					+ "\n\tr\t-\tRaise"
 					+ "\n\ta\t-\tAllIn");
-			char selection = Eingabe.readChar();
 			switch(selection) {
 				case 'd':	raise();
 						break;
@@ -254,11 +252,10 @@ public class RoundManager {
 		}
 	}
 	
-	public void bet() {
+	public void bet(char bet) {
 		System.out.println("\tHow much do you want to raise?"
 				+ "\n\tMinimum: " + (this.pM.calcDiff() + 1)
 				+ "\n\tMaximum: " + (this.pM.getPlayerList()[this.pM.getActualPlayer()].getChipNumber()-1));
-		int bet = Eingabe.readInt();
 		if (bet > this.pM.getPlayerList()[this.pM.getActualPlayer()].getChipNumber()) {
 			System.out.println("You don't have enough Chips: " + bet + " Please try again.");
 			bet();
@@ -274,11 +271,10 @@ public class RoundManager {
 		this.pM.nextPlayer();
 	}
 	
-	private void allIn() {
+	private void allIn(char choice) {
 		System.out.println("\tSure?"
 				+ "\n\ty\t-\tyes"
 				+ "\n\tn\t-\tno");
-		char choice = Eingabe.readChar();
 		switch (choice){
 		
 		case 'y':	this.pM.allIn();

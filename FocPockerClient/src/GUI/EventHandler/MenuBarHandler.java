@@ -1,13 +1,13 @@
-package EventHandler;
+package GUI.EventHandler;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-import forPockerFoc.ExitAskWindow;
-import forPockerFoc.HandsWindow;
-import forPockerFoc.RulesWindow;
-import forPockerFoc.SelectionWindow;
+import GUI.gameWindows.ExitAskWindow;
+import GUI.gameWindows.HandsWindow;
+import GUI.gameWindows.RulesWindow;
+import GUI.gameWindows.SelectionWindow;
 
 public class MenuBarHandler implements ActionListener {
 	

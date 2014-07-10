@@ -3,6 +3,7 @@ package domain;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import valueObjects.*;
 
@@ -29,8 +30,8 @@ public class FileManager{
 	public void readData(String file) throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		    
-		/* Wird solange ausgelesen, wie etwas in der nächsten Zeile steht und
-		 * nicht "null" vom Stream zurückgegeben wird.
+		/* Wird solange ausgelesen, wie etwas in der nï¿½chsten Zeile steht und
+		 * nicht "null" vom Stream zurï¿½ckgegeben wird.
 		 */
 		while ((row = br.readLine()) != null) {
 			split = row.split(";"); // Auslesen der Textdatei, Zeilenumbruch erfolgt nach jedem ";"
@@ -46,7 +47,7 @@ public class FileManager{
 	// list wird in cardDeck geschrieben
     public void listToCardDeck() {
     	for (int i = 0; i < (this.list.size()-2); i += 3) {
-    		/* letzter String für jede Karte wird von String in int geparsed, 
+    		/* letzter String fï¿½r jede Karte wird von String in int geparsed, 
     		 *weil Card(String value, String suit, int rank)
     		 */
     		this.cardDeck.add(new Card(this.list.get(i), this.list.get(i+1), 
@@ -59,7 +60,7 @@ public class FileManager{
     // list wird in playerList geschrieben
     public void listToPlayerList() {
     	for (int i = 0; i < (this.list.size()-3); i += 4) {
-    		/* erster und dritter String für jeden Player wird von String in int geparsed,
+    		/* erster und dritter String fï¿½r jeden Player wird von String in int geparsed,
     		 * weil Player(int id, String name, int chips, String password)
     		 */
     		this.playerList.add(new Player(Integer.parseInt(this.list.get(i)), this.list.get(i+1), 
@@ -76,6 +77,12 @@ public class FileManager{
     
  // Getter playerList
     public ArrayList<Player> getPlayerList() {
+        try {
+            this.readData("bin/data/PlayerList.txt");
+        }catch (IOException e){
+            System.out.println("Fehler beim Einlesen.");
+        }
+        this.listToPlayerList();
 		return playerList;
 	}
     
