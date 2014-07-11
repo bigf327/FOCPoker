@@ -391,11 +391,11 @@ public class MainWindow extends JFrame {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Image Not Found", "Picture ERROR",JOptionPane.WARNING_MESSAGE);
 		}
-        this.checkButton.setEnabled(this.currentRound.canCheck());
-        this.raiseButton.setEnabled(this.currentRound.canRaise());
-        this.betButton.setEnabled(this.currentRound.canBet());
-        this.foldButton.setEnabled(this.currentRound.canFold());
-        this.callButton.setEnabled(this.currentRound.canCall());
+        this.checkButton.setEnabled(this.currentRound.canCurrentPlayerCheck());
+        this.raiseButton.setEnabled(this.currentRound.canCurrentPlayerRaise());
+        this.betButton.setEnabled(this.currentRound.canCurrentPlayerBet());
+        this.foldButton.setEnabled(this.currentRound.canCurrentPlayerFold());
+        this.callButton.setEnabled(this.currentRound.canCurrentPlayerCall());
         serverInfo.setText("Pot:" +this.currentRound.getPot() + "Player: "+ this.currentRound.getCurrentPlayer().getName());
         this.setPlayerLabels();
 	}

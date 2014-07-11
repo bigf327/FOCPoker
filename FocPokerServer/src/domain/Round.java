@@ -148,25 +148,25 @@ public class Round {
     public Player getPlayerBefore(){
         return this.beforePlayerStack.peek();
     }
-    public boolean canBet(){
+    public boolean canCurrentPlayerBet(){
         return true; //@todo einbauen der Prüfung
     }
-    public boolean canCheck(){
+    public boolean canCurrentPlayerCheck(){
         if (this.raisedPotThisRound){
             return false;
         }
         return true; //@todo einbauen der Pürfung
     }
-    public boolean canRaise(){
+    public boolean canCurrentPlayerRaise(){
         return true;//@todo einbauen der Pürfung
     }
-    public boolean canCall(){
+    public boolean canCurrentPlayerCall(){
         return true;//@todo einbauen der Pürfung
     }
-    public boolean canAllIn(){
+    public boolean canCurrentPlayerAllIn(){
         return true;//@todo einbauen der Pürfung
     }
-    public boolean canFold(){
+    public boolean canCurrentPlayerFold(){
         return true;//@todo einbauen der Pürfung
     }
 
