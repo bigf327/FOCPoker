@@ -5,13 +5,13 @@ public class HelpAndRules {
 		System.out.println("\tDESCRIPTION"
 				+ "\n\tTexas hold 'em (also known as hold 'em or holdem) is a variation of the standard card game of poker. "
 				+ "\n\tTexas hold 'em consists of two cards (hole cards) being dealt face down to each player and then five community "
-				+ "\n\tcards being placed face-up by the dealer — a series of three ('Flop') then an additional single card "
+				+ "\n\tcards being placed face-up by the dealer ï¿½ a series of three ('Flop') then an additional single card "
 				+ "\n\t('Turn') and another additional card ('River') - with players having the option to check, bet, raise or fold "
 				+ "\n\tafter each deal."); //Source: en.wikipedia.org/wiki/Texas_hold_'em
-		rulesMenu();
+
 	}
 	
-	public static void rulesMenu() {
+	public static void rulesMenu(char helpSelection) {
 		System.out.println("\n\tRULES");
 		System.out.println("\tb\t-\tBetting"); // b
 		System.out.println("\tp\t-\tPlay of the hand"); // p
@@ -20,11 +20,10 @@ public class HelpAndRules {
 		System.out.println("\te\t-\tExit"); // e
 		
 		System.out.println("\n\tSelection:\t");
-		char helpSelection = Eingabe.readChar();
 		switch (helpSelection) {
 		case 'b':
 			System.out.println("\n\tBETTING"
-					+ "\n\tHold 'em is normally played using small and big blind bets – forced bets by two players. Antes "
+					+ "\n\tHold 'em is normally played using small and big blind bets ï¿½ forced bets by two players. Antes "
 					+ "\n\t(forced contributions by all players) may be used in addition to blinds, particularly in later stages of "
 					+ "\n\ttournament play. A dealer button is used to represent the player in the dealer position; the dealer button "
 					+ "\n\trotates clockwise after each hand, changing the position of the dealer and blinds. The small blind is posted by "
@@ -32,7 +31,6 @@ public class HelpAndRules {
 					+ "\n\tthe player to the left of the small blind, is equal to the minimum bet. In tournament poker, the blind/ante "
 					+ "\n\tstructure periodically increases as the tournament progresses. After one round of betting is done, the next "
 					+ "\n\tbetting round will start by the person after the big blind and small blind.");
-			rulesMenu();
 			break;
 		case 'p':
 			System.out.println("\n\tPLAY OF THE HAND"
@@ -54,7 +52,6 @@ public class HelpAndRules {
 					+ "\n\tAfter the flop betting round ends, a single community card (called the turn or fourth street) is dealt, followed "
 					+ "\n\tby a third betting round. A final single community card (called the river or fifth street) is then dealt, "
 					+ "\n\tfollowed by a fourth betting round and the showdown, if necessary.");
-			rulesMenu();
 			break;
 		case 's':
 			System.out.println("\n\tTHE SHOWDOWN"
@@ -71,7 +68,6 @@ public class HelpAndRules {
 					+ "\n\tfewer than five cards, (such as two pair or three of a kind), then kickers are used to settle ties (see the second "
 					+ "\n\texample below). Note that the card's numerical rank is of sole importance; suit values are irrelevant in Hold'em. "
 					+ "\n\tThe last player to bet is the first player to show his hand.");
-			rulesMenu();
 			break;
 		case 'h':
 			System.out.println("\n\tLIST OF HANDS"

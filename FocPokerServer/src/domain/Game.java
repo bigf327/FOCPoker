@@ -62,4 +62,7 @@ public class Game {
     public boolean isNextRound(){
         return false;
     }
+    public RoundManager getRoundManager(){
+        return this.roundManager;
+    }
 }

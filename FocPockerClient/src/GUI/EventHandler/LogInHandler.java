@@ -107,7 +107,8 @@ public class LogInHandler implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String answerFromServer = "";
-		
+        /**
+
 		if(this.getPlayerData() == true){
 //			System.out.println(playerName + ";" + playerPassword);
 			raw.sendAText(playerName + ";" + playerPassword);
@@ -128,6 +129,7 @@ public class LogInHandler implements ActionListener {
 			}
 			
 		}
+         */
 	}
 }
 

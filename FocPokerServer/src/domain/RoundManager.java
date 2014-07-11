@@ -18,7 +18,7 @@ public class RoundManager {
 	private int endCounter = 0;
 	private boolean roundEnd = false;
 	
-	public RoundManager (){
+	public RoundManager  (){
 		
 	}
 	
@@ -85,11 +85,10 @@ public class RoundManager {
 		} else {
 			this.pM.setActualPlayer(startPlayer + 2);	
 		}
-		playerStatus();
 	}
 	
 	public void endOfRound() {
-		if(this.endCounter >= pM.getPlayerList().length) {
+		if(this.endCounter >= this.pM.getPlayerList().length) {
 			if(!flopPlaced) {
 				//showFlop();
 				setFlopPlaced(true);
@@ -137,10 +136,15 @@ public class RoundManager {
 			}
 		}
 	}
-	
-	public void playerStatus(char selection) {
+
+    /**
+     *
+     * @param selection Besagt c, r, f h
+     * @param selection2 Besagt d r a
+     */
+	public void playerStatus(char selection, char selection2, int value) {
 		endOfRound();
-		if (lastPlayerCheck()) {
+		if (isLastPlayerInRound()) {
 			roundEnd = true;
 		}
 		if (roundEnd == false) {
@@ -153,6 +157,10 @@ public class RoundManager {
 				showFlop();
 			}
 			showActualBet();
+
+            /**
+             * Wenn nicht genügend chips => all In
+             */
 			if(this.pM.allInNecessary()) {
 				this.pM.nextPlayer();
 			}
@@ -165,18 +173,15 @@ public class RoundManager {
 						+ "\n\tr\t-\tRaise"
 						+ "\n\tf\t-\tFold"
 						+ "\n\th\t-\tHelp|Rules");
+
 				switch(selection) {
 					case 'c':	check();
-								playerStatus();
 							break;
-					case 'r':	raiseOrBet();
-								playerStatus();
+					case 'r':	raiseOrBet(selection2,value);
 							break;
 					case 'f':	fold();
-								playerStatus();
 							break;
 					case 'h':	HelpAndRules.helpMenu();
-								playerStatus();
 							break;
 					default:
 							break;
@@ -191,19 +196,14 @@ public class RoundManager {
 						+ "\n\tr\t-\tRaise"
 						+ "\n\tf\t-\tFold"
 						+ "\n\th\t-\tHelp|Rules");
-				char selection = Eingabe.readChar();
 				switch(selection) {
 					case 'c':	call();
-								playerStatus();
 							break;
-					case 'r':	raiseOrBet();
-								playerStatus();
+					case 'r':	raiseOrBet(selection2,value);
 							break;
 					case 'f':	fold();
-								playerStatus();
 							break;
 					case 'h':	HelpAndRules.helpMenu();
-								playerStatus();
 							break;
 					default:
 							break;
@@ -230,7 +230,7 @@ public class RoundManager {
 		this.pM.nextPlayer();
 	}
 	
-	public void raiseOrBet(char selection) {
+	public void raiseOrBet(char selection, int value) {
 		int playerBefore = this.pM.playerBefore();
 		if (this.pM.getPlayerList()[playerBefore].getActualBet() > 0) {
 			System.out.println("\tWhat to do?"
@@ -240,25 +240,25 @@ public class RoundManager {
 			switch(selection) {
 				case 'd':	raise();
 						break;
-				case 'r':	bet();
+				case 'r':	bet(value);
 						break;
-				case 'a':	allIn();
+				case 'a':	allIn(selection);
 						break;
 				default:
 						break;
 			}
 		} else {
-			bet();
+			bet(value);
 		}
 	}
 	
-	public void bet(char bet) {
+	public void bet(int bet) throws IllegalArgumentException{
 		System.out.println("\tHow much do you want to raise?"
 				+ "\n\tMinimum: " + (this.pM.calcDiff() + 1)
 				+ "\n\tMaximum: " + (this.pM.getPlayerList()[this.pM.getActualPlayer()].getChipNumber()-1));
 		if (bet > this.pM.getPlayerList()[this.pM.getActualPlayer()].getChipNumber()) {
 			System.out.println("You don't have enough Chips: " + bet + " Please try again.");
-			bet();
+			throw new IllegalArgumentException("You don't have enough Chips: " + bet + " Please try again.");
 		}
 		this.pM.bet(bet);
 		this.endCounter = 0;
@@ -282,12 +282,9 @@ public class RoundManager {
 						this.endCounter = 0;
 					} else {
 						this.endCounter++;
-					}					
-				break;
-		case'n':	playerStatus();
+					}
 				break;
 		default:	System.out.println("Unknown input!" + "\n Please try again.");
-					allIn();
 				break;
 		}
 		this.pM.nextPlayer();
@@ -402,7 +399,7 @@ public class RoundManager {
 		System.out.println("\n############################################");
 	}
 	
-	private boolean lastPlayerCheck() {
+	private boolean isLastPlayerInRound() {
 		// Einer gewinnt, da der Rest gefolded hat
 		int lastPlayerCounter = 0;
 		for (int i = 0; i < this.pM.getPlayerList().length; i++) {

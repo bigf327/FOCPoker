@@ -1,4 +1,4 @@
-package forPockerFoc;
+package GUI.gameWindows;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -11,7 +11,7 @@ import java.awt.Toolkit;
 import javax.swing.*;
 
 import valueObjects.ReadAndWriter;
-import EventHandler.LogInHandler;
+import GUI.EventHandler.LogInHandler;
 
 public class LogInWindow extends JFrame {
 
@@ -87,7 +87,7 @@ public class LogInWindow extends JFrame {
 		final Toolkit tK = this.getToolkit();
 		try {
 			//Image bild = tK.getImage("/Users/fabianRedecker/Dropbox/Studium FR & CS/Prog2 Projekt/Projektdateien/workspace fabian/Grafics/Image/selectionPic.jpg");
-			Image bild = tK.getImage(this.getClass().getResource("/Images/login135x147White.png"));
+			Image bild = tK.getImage(this.getClass().getResource("/GUI/Images/login135x147White.png"));
 			g.drawImage(bild,80,60, this);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Image Not Found", "Picture ERROR",JOptionPane.WARNING_MESSAGE);

@@ -1,4 +1,4 @@
-package forPockerFoc;
+package GUI.gameWindows;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -7,7 +7,7 @@ import java.awt.GridLayout;
 import javax.swing.*;
 
 import valueObjects.ReadAndWriter;
-import EventHandler.SignInHandler;
+import GUI.EventHandler.SignInHandler;
 
 public class SignInWindow extends JFrame {
 

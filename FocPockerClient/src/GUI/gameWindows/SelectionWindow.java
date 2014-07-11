@@ -1,4 +1,4 @@
-package forPockerFoc;
+package GUI.gameWindows;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -36,7 +36,7 @@ public class SelectionWindow extends JFrame {
 		super("Welcome to FOC Poker");
 		this.raw = new ReadAndWriter("", 0);
 		
-		// logInButton & signInButton Layout and EventHandler
+		// logInButton & signInButton Layout and GUI.EventHandler
 		logInButton = new JButton("Log in");
 		logInButton.setBackground(Color.GRAY);
 		logInButton.addActionListener(new ActionListener() {
@@ -104,7 +104,7 @@ public class SelectionWindow extends JFrame {
 		super.paint(g);
 		final Toolkit tK = this.getToolkit();
 		try {
-			bild = tK.getImage(this.getClass().getResource("/Images/selection244x226.png"));
+			bild = tK.getImage(this.getClass().getResource("/GUI/Images/selection244x226.png"));
 			g.drawImage(bild,25,10, this);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Image Not Found", "Picture ERROR",JOptionPane.WARNING_MESSAGE);

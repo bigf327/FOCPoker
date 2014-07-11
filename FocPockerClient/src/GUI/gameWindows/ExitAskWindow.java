@@ -1,4 +1,4 @@
-package forPockerFoc;
+package GUI.gameWindows;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridLayout;
@@ -88,7 +88,7 @@ public class ExitAskWindow extends JFrame {
 		super.paint(g);
 		final Toolkit tK = this.getToolkit();
 		try {
-			Image mainImage = tK.getImage(this.getClass().getResource("/Images/exit128x128.png"));
+			Image mainImage = tK.getImage(this.getClass().getResource("/GUI/Images/exit128x128.png"));
 			g.drawImage(mainImage,5,22, this);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Image Not Found", "Picture ERROR",JOptionPane.WARNING_MESSAGE);

@@ -101,7 +101,7 @@ public class ClientHandler implements Runnable {
 		System.out.println("connection with: " + "\n" + this.client.getInetAddress() +
 							"\n"+ this.client.getPort() + "\n" + "canceled by Client" );
 		
-		//Close Client because he dont want do play any more
+		//Close IClient because he dont want do play any more
 		try {
 			this.client.close();
 		} catch (IOException e) {

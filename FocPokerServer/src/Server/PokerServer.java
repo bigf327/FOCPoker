@@ -38,7 +38,7 @@ public class PokerServer {
 	            while (true) {
 	                // wqit for incomming Clients
 	                final Socket clientSocket = serverSocket.accept();
-	                // if a Clienents was accepted Start a new ClientHandler with current accepted Client
+	                // if a Clienents was accepted Start a new ClientHandler with current accepted IClient
 	                ClientHandler cH = new ClientHandler(clientSocket);
 	                final Thread t = new Thread(cH);
 	                t.start();

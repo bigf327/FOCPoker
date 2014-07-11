@@ -1,4 +1,4 @@
-package forPockerFoc;
+package GUI.gameWindows;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
