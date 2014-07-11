@@ -8,8 +8,8 @@ public class Client  {
     public  Client (){
         this.player = new Player(5,"Bob",2500,"Bob");
         Game game = new Game();
-        MainWindow window = new MainWindow(this.player,game);
-        game.startGameLoop();
+        game.startNewRound();
+        MainWindow window = new MainWindow(game);
 
     }
 

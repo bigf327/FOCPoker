@@ -15,9 +15,7 @@ public class ChipManager {
 		this.bigBlind = 2*smallBlind;
 	}
 	
-	
 
-	
 	/**
 	 * Setter pot
 	 * @param newPot

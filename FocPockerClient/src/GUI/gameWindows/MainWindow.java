@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 import domain.Game;
+import domain.Round;
 import valueObjects.Cards;
 import valueObjects.Player;
 
@@ -71,17 +72,19 @@ public class MainWindow extends JFrame {
 	private JPanel showPanel;
 	private JSplitPane chatWindowPanel;
 	private JScrollPane chatShowScrollPane;
+
+
 	
-	//Player far a MainWindow
-	private final Player currentPlayer;
+
     private final Game game;
+    private Round currentRound;
 	Cards playerCardOne;
 	Cards playerCardTwo;
 	
-	public MainWindow(Player p, Game game){
+	public MainWindow(Game game){
 		super("FOC Poker");
         this.game = game;
-		this.currentPlayer = p;
+        this.currentRound = game.getCurrentRound();
 		
 		
 		//get Timer from Class Countdown
@@ -98,22 +101,18 @@ public class MainWindow extends JFrame {
 		playerCardOne= Cards.getACard();
 		playerCardTwo= Cards.getACard();
 
-        this.playerLabels.add(new Label());
-        this.playerLabels.add(new Label());
-        this.playerLabels.add(new Label());
-        this.playerLabels.add(new Label());
-        this.playerLabels.add(new Label());
-        this.playerLabels.add(new Label());
-
-		//only for testing.....
-		this.setOwnPlayerInfo(currentPlayer.getName() + "\n" + currentPlayer.getChipNumber());
+        this.setPlayerLabels();
 		
 	}
 
     private void setPlayerLabels(){
         int i = 0;
         for(Player player : this.game.getPalyers()){
-            this.playerLabels.get(i).setText(player.getName());
+            String foldMsg = (player.isInRound() ? "":"Fold");
+            String currentPlayerMsg = (this.currentRound.getCurrentPlayer() == player ? " Am Zug ":"");
+            int chips = player.getChipNumber();
+            int bet = player.getActualBet();
+            this.playerLabels.get(i).setText(player.getName() + " (" + foldMsg + currentPlayerMsg +") AllChips: " + chips + "ActualBet: " + bet);
             i++;
         }
     }
@@ -183,7 +182,7 @@ public class MainWindow extends JFrame {
 		//init send Button + actionListener
 		senderButton = new JButton("send");
 		senderButton.setActionCommand("send");
-		senderButton.addActionListener(new ChatHandler(this, this.currentPlayer));
+		//senderButton.addActionListener(new ChatHandler(this, this.currentPlayer));
 		//init chatPanel
 		chatPanel = new JPanel();
 		chatPanel.add(showArea);
@@ -221,7 +220,12 @@ public class MainWindow extends JFrame {
         otherPlayersAtTable.setBorder(blackline);
         otherPlayersAtTable.add(otherPlayersLabel);
 
-
+        this.playerLabels.add(new Label());
+        this.playerLabels.add(new Label());
+        this.playerLabels.add(new Label());
+        this.playerLabels.add(new Label());
+        this.playerLabels.add(new Label());
+        this.playerLabels.add(new Label());
         for(Label label : this.playerLabels){
             label.setForeground(Color.WHITE);
             otherPlayersAtTable.add(label);
@@ -263,11 +267,11 @@ public class MainWindow extends JFrame {
 		raiseButton.setActionCommand("raiseButton");
 		foldButton.setActionCommand("foldButton");
 		//add ActionListener fpr Button(PlayerActivityHander=>GUI.EventHandler)
-		checkButton.addActionListener(new PlayerActivityHandler(game.getRoundManager()));
-		callButton.addActionListener(new PlayerActivityHandler(game.getRoundManager()));
-		betButton.addActionListener(new PlayerActivityHandler(game.getRoundManager()));
-		raiseButton.addActionListener(new PlayerActivityHandler(game.getRoundManager()));
-		foldButton.addActionListener(new PlayerActivityHandler(game.getRoundManager()));
+		checkButton.addActionListener(new PlayerActivityHandler(this.currentRound,this));
+		callButton.addActionListener(new PlayerActivityHandler(this.currentRound,this));
+		betButton.addActionListener(new PlayerActivityHandler(this.currentRound,this));
+		raiseButton.addActionListener(new PlayerActivityHandler(this.currentRound,this));
+		foldButton.addActionListener(new PlayerActivityHandler(this.currentRound,this));
 		//init static JTextField for Server information 
 		serverInfo = new JTextField();
 		serverInfo.setEditable(false);
@@ -387,7 +391,13 @@ public class MainWindow extends JFrame {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Image Not Found", "Picture ERROR",JOptionPane.WARNING_MESSAGE);
 		}
-			
+        this.checkButton.setEnabled(this.currentRound.canCheck());
+        this.raiseButton.setEnabled(this.currentRound.canRaise());
+        this.betButton.setEnabled(this.currentRound.canBet());
+        this.foldButton.setEnabled(this.currentRound.canFold());
+        this.callButton.setEnabled(this.currentRound.canCall());
+        serverInfo.setText("Pot:" +this.currentRound.getPot() + "Player: "+ this.currentRound.getCurrentPlayer().getName());
+        this.setPlayerLabels();
 	}
 	
 	//getter + setter fpr own Player information (Jlabel)

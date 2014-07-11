@@ -15,6 +15,9 @@ public class Player implements Comparable<Player>{
 	// TODO: Player bekommt "eigenes" lastBet (actualPlayer) und ChipManager bekommt Liste mit Bets aller Spieler?
 	private int actualBet;
 	private Card[] hand = new Card[2];
+
+
+    private boolean isInRound = true;
 	
 	
 	//Attribute for WinRank
@@ -122,6 +125,14 @@ public class Player implements Comparable<Player>{
 	public int compareTo(Player p) {
 		return ((Integer)this.getHandRank()).compareTo(p.getHandRank());
 	}
-	
-	
+
+    public boolean isInRound() {
+        return isInRound;
+    }
+
+    public void setInRound(boolean isInRound) {
+        this.isInRound = isInRound;
+    }
+
+
 }
