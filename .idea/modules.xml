@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FocPockerClient/FocPockerClient.iml" filepath="$PROJECT_DIR$/FocPockerClient/FocPockerClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FocPokerCommon/FocPokerCommon.iml" filepath="$PROJECT_DIR$/FocPokerCommon/FocPokerCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FocPokerServer/FocPokerServer.iml" filepath="$PROJECT_DIR$/FocPokerServer/FocPokerServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GitPokerClient/GitPokerClient.iml" filepath="$PROJECT_DIR$/GitPokerClient/GitPokerClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" filepath="$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" />
+    </modules>
+  </component>
+</project>
+
