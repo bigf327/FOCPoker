@@ -1,7 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8c51fa-96f6-4bd8-b01a-9f4e6fd90c34" name="Default" comment="" />
+    <list default="true" id="ec8c51fa-96f6-4bd8-b01a-9f4e6fd90c34" name="Default" comment="- Move&#10;- Add Project files &#10;- Spiellogic angepasst">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/LogInPic.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/51.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/52.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/cardHidden.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/cardHidden45left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/cardHidden45right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/cardImages/cardHidden90.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/exit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/exit128x128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/exit135x147.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/login1024x768.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/login128x128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/login135x147.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/login135x147White.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/loginNew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/logo100x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/logo200x200.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/selection122x113.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/selection244x226.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/selectionPic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/success.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/success1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/success114x114.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/success57x57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPockerClient/bin/GUI/Images/table900x600.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPokerServer/bin/data/CardSet.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPokerServer/bin/data/PlayerData.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPokerServer/bin/data/PlayerList.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPokerServer/bin/data/listOfHands_pokerFOC.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FocPokerServer/bin/data/rules_pokerFOC.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java" afterPath="$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPockerClient/FocPockerClient.iml" afterPath="$PROJECT_DIR$/FocPockerClient/FocPockerClient.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPokerServer/FocPokerServer.iml" afterPath="$PROJECT_DIR$/FocPokerServer/FocPokerServer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java" afterPath="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java" afterPath="$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPokerServer/src/domain/Round.java" afterPath="$PROJECT_DIR$/FocPokerServer/src/domain/Round.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/SelectionWindow.java" afterPath="$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/SelectionWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/SignInHandler.java" afterPath="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/SignInHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="FOCPoker.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +114,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/Client.java">
+      <file leaf-file-name="LogInHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="2145">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,35 +126,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelpAndRules.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/HelpAndRules.java">
+      <file leaf-file-name="SignInHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/SignInHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2295">
-              <caret line="69" column="90" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1665">
+              <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogInHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1410">
-              <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerActivityHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/PlayerActivityHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <caret line="18" column="40" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,65 +139,92 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="1095">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1516#1517#0" expanded="true" />
-                <element signature="e#1559#1560#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/FileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3461537" vertical-offset="896" max-vertical-offset="1590">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="e#2742#2743#0" expanded="true" />
-                <element signature="e#3087#3088#0" expanded="true" />
-                <element signature="e#3115#3116#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoundManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/RoundManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0384614" vertical-offset="1241" max-vertical-offset="6675">
-              <caret line="90" column="37" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="512" max-vertical-offset="870">
+              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardManager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CardManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6988417" vertical-offset="373" max-vertical-offset="1170">
-              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1245">
+              <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/PlayerManager.java">
+      <file leaf-file-name="Cards.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Cards.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2227" max-vertical-offset="2685">
-              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1352" max-vertical-offset="2100">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Round.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Round.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.9230769" vertical-offset="3329" max-vertical-offset="4860">
+              <caret line="234" column="30" selection-start-line="234" selection-start-column="30" selection-end-line="234" selection-end-column="30" />
               <folding>
-                <element signature="e#4669#4670#0" expanded="true" />
-                <element signature="e#4909#4910#0" expanded="true" />
-                <element signature="e#4948#4949#0" expanded="true" />
+                <element signature="e#4400#4401#0" expanded="true" />
+                <element signature="e#4452#4453#0" expanded="true" />
+                <element signature="e#7218#7219#0" expanded="true" />
+                <element signature="e#7292#7293#0" expanded="true" />
+                <element signature="e#9480#9481#0" expanded="true" />
+                <element signature="e#9516#9517#0" expanded="true" />
+                <element signature="e#9558#9559#0" expanded="true" />
+                <element signature="e#9602#9603#0" expanded="true" />
+                <element signature="e#9624#9625#0" expanded="true" />
+                <element signature="e#9663#9664#0" expanded="true" />
+                <element signature="e#9701#9702#0" expanded="true" />
+                <element signature="e#9737#9738#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectionWindow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/SelectionWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1590">
+              <caret line="50" column="92" selection-start-line="50" selection-start-column="92" selection-end-line="50" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Countdown.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/Countdown.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="750">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/MainWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14634146" vertical-offset="6048" max-vertical-offset="6540">
+              <caret line="422" column="12" selection-start-line="422" selection-start-column="12" selection-end-line="422" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,18 +254,24 @@
         <option value="$PROJECT_DIR$/FocPokerServer/src/domain/Game.java" />
         <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/MainWindow.java" />
         <option value="$PROJECT_DIR$/FocPokerServer/src/domain/HelpAndRules.java" />
-        <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java" />
         <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/PlayerActivityHandler.java" />
         <option value="$PROJECT_DIR$/FocPockerClient/src/Client.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/FocPokerServer/src/domain/RoundManager.java" />
+        <option value="$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java" />
+        <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java" />
+        <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/SignInHandler.java" />
+        <option value="$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/SelectionWindow.java" />
+        <option value="$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java" />
+        <option value="$PROJECT_DIR$/FocPokerServer/src/domain/Round.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
     <option name="y" value="22" />
-    <option name="width" value="1680" />
-    <option name="height" value="940" />
+    <option name="width" value="1260" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -183,7 +284,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -269,19 +370,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -307,6 +395,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -380,7 +481,9 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <list size="1">
@@ -414,33 +517,53 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="940" extended-state="0" />
+    <frame x="10" y="22" width="1260" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976415" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3301887" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33004925" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36453202" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21182266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.087027915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -472,46 +595,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="405">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="248" max-vertical-offset="1455">
-          <caret line="49" column="25" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.153846" vertical-offset="3546" max-vertical-offset="6405">
-          <caret line="265" column="57" selection-start-line="265" selection-start-column="57" selection-end-line="265" selection-end-column="57" />
-          <folding>
-            <element signature="e#1474#1481#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,20 +613,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="613" max-vertical-offset="1410">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1920" max-vertical-offset="2145">
           <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/PlayerActivityHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="960">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1005">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/FileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="1965">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="1170">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/PlayerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="885">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="405">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/HelpAndRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2295">
+          <caret line="69" column="90" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/PlayerActivityHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="960">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -546,25 +702,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="1095">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1516#1517#0" expanded="true" />
-            <element signature="e#1559#1560#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -572,46 +710,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8" vertical-offset="0" max-vertical-offset="360">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/PlayerManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2227" max-vertical-offset="2685">
-          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding>
-            <element signature="e#4669#4670#0" expanded="true" />
-            <element signature="e#4909#4910#0" expanded="true" />
-            <element signature="e#4948#4949#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="885">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3461537" vertical-offset="896" max-vertical-offset="1590">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="1965">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="e#2742#2743#0" expanded="true" />
-            <element signature="e#3087#3088#0" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/RoundManager.java">
+    <entry file="file://$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Cards.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0384614" vertical-offset="1241" max-vertical-offset="6675">
-          <caret line="90" column="37" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1352" max-vertical-offset="2100">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1005">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/CardManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6988417" vertical-offset="373" max-vertical-offset="1170">
-          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="707" max-vertical-offset="1245">
+          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/LogInHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="2145">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/EventHandler/SignInHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="1665">
+          <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/SelectionWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1590">
+          <caret line="50" column="92" selection-start-line="50" selection-start-column="92" selection-end-line="50" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/Countdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="750">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerCommon/src/valueObjects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPokerServer/src/domain/Round.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9230769" vertical-offset="3329" max-vertical-offset="4860">
+          <caret line="234" column="30" selection-start-line="234" selection-start-column="30" selection-end-line="234" selection-end-column="30" />
+          <folding>
+            <element signature="e#4400#4401#0" expanded="true" />
+            <element signature="e#4452#4453#0" expanded="true" />
+            <element signature="e#7218#7219#0" expanded="true" />
+            <element signature="e#7292#7293#0" expanded="true" />
+            <element signature="e#9480#9481#0" expanded="true" />
+            <element signature="e#9516#9517#0" expanded="true" />
+            <element signature="e#9558#9559#0" expanded="true" />
+            <element signature="e#9602#9603#0" expanded="true" />
+            <element signature="e#9624#9625#0" expanded="true" />
+            <element signature="e#9663#9664#0" expanded="true" />
+            <element signature="e#9701#9702#0" expanded="true" />
+            <element signature="e#9737#9738#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FocPockerClient/src/GUI/gameWindows/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14634146" vertical-offset="6048" max-vertical-offset="6540">
+          <caret line="422" column="12" selection-start-line="422" selection-start-column="12" selection-end-line="422" selection-end-column="12" />
           <folding />
         </state>
       </provider>

@@ -15,7 +15,7 @@ import GUI.gameWindows.SuccessWindow;
 public class SignInHandler implements ActionListener {
 	
 
-	//TODO als Atribut von Player entfernen
+
 	//private int id = 0;
 	
 	//Actual SignIn Window as Parame in Konstructor
@@ -40,7 +40,7 @@ public class SignInHandler implements ActionListener {
 			String hallo = this.raw.getAText();
 			System.out.println(hallo);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			System.err.println("SignInHandler: ERROR while reading hellotxt from server");
 			e.printStackTrace();
 		}
 		

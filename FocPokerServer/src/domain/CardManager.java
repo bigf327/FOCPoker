@@ -4,13 +4,14 @@ import java.util.Collections;
 import java.util.Stack;
 
 import valueObjects.Card;
+import valueObjects.Cards;
 
 /**
  * @author Oke Schwien, Christoph Schuette, Fabian Redecker
  * Verwaltung CardDeck 
  * 		cardDeck shuffle, stack-Erzeugung (cardDeckStack)
  * 		Flop, Turn, River ziehen
- * 		(trashDeck für "weggeworfene Karten)
+ * 		(trashDeck fï¿½r "weggeworfene Karten)
  */
 public class CardManager {
 	// Attribute
@@ -23,6 +24,7 @@ public class CardManager {
 	public CardManager(FileManager fM) {
 		this.fM = fM;
 		//fM umgelagert
+        Cards.createDeck();
 	}
 	
 	// Methode zum shuffle des cardDecks aus dem FileManager und bestueckung des Stacks mit den Karten
@@ -37,36 +39,40 @@ public class CardManager {
 		}
 	}
 	
-	// TableDeck mit karten bestücken
+	// TableDeck mit karten bestï¿½cken
 	public void drawTableCards() {
 		// FLOP
 		// 1 Karte weglegen
-		trashDeck.add(cardDeckStack.pop());
+		//trashDeck.add(cardDeckStack.pop());
+        trashDeck.add(Cards.getACard().getCard());
 		// Flop ziehen
 		for (int i = 0; i < 3; i++) {
-			tableDeck[i] = cardDeckStack.pop();
+			//tableDeck[i] = cardDeckStack.pop();
+            tableDeck[i] = Cards.getACard().getCard();
 		}
 		
 		// TURN
 		// 1 Karte weglegen
-		trashDeck.add(cardDeckStack.pop());
+		//trashDeck.add(cardDeckStack.pop());
+        trashDeck.add(Cards.getACard().getCard());
 		// Turn ziehen
-		tableDeck[3] = cardDeckStack.pop();
+		//tableDeck[3] = cardDeckStack.pop();
+        tableDeck[3] = Cards.getACard().getCard();
 		
 		// RIVER
 		// 1 Karte weglegen
-		trashDeck.add(cardDeckStack.pop());		
-		// ziehen
-		tableDeck[4] = cardDeckStack.pop();	
-	}
+		//trashDeck.add(cardDeckStack.pop());
+        trashDeck.add(Cards.getACard().getCard());
+        // ziehen
+		//tableDeck[4] = cardDeckStack.pop();
+        tableDeck[4] = Cards.getACard().getCard();
+    }
 	
 	// Getter tableDeck
 	public static Card[] getTableDeck(){
 		return tableDeck;
 	}
-	
-	
-	// TODO: Auslagern? Wohin?
+
 	
 
 	// trashDeck anzeigen

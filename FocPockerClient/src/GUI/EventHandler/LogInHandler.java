@@ -22,9 +22,9 @@
 //            while ((sZeile = br.readLine()) != null) {
 //                if(sZeile.contains(playerName) && sZeile.contains(playerPassword)){
 //					new SuccessWindow("Success", "Log in was successful", "OK");
-//					//TODO dispose LogInWIndow
+//
 //                	check++;
-//                	//TODO close window start Game
+//
 //                }
 //                
 //            }

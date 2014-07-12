@@ -48,7 +48,7 @@ public class SelectionWindow extends JFrame {
 					String a = raw.getAText();
 					System.out.println(a);
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
+					System.err.println("SelectionWindow: ERROR while get message from Server");
 					e1.printStackTrace();
 				}
 			}

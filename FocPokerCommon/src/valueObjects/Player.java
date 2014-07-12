@@ -12,7 +12,6 @@ public class Player implements Comparable<Player>{
 	private String name;
 	private String password; // sobald genutzt als Parameter in Constructor einfuegen
 	private int chipNumber;
-	// TODO: Player bekommt "eigenes" lastBet (actualPlayer) und ChipManager bekommt Liste mit Bets aller Spieler?
 	private int actualBet;
 	private Card[] hand = new Card[2];
 

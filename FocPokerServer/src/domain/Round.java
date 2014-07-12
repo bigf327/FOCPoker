@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Stack;
 
 import valueObjects.Card;
+import valueObjects.Cards;
 import valueObjects.Player;
 
 
@@ -17,6 +18,7 @@ public class Round {
 	private final PlayerManager pM;
     private final int smallBlind;
     private final int bigBlind;
+    private int shownCardsIndex = 0;
     private final List<Card> shownCards = new ArrayList<Card>();
     private final Stack<Player> beforePlayerStack;
     private final Stack<Player> nextPlayerStack = new Stack<Player>();
@@ -43,8 +45,9 @@ public class Round {
         this.beforePlayerStack = new Stack<Player>();
         this.nextPlayerStack.addAll(nextPlayerStack);
         this.smallBlind = this.cH.getSmallBlind();;
-        this.bigBlind = this.cH.getBigBlind(); // @todo Bitte die Berechnung für BigBlind einfügen
+        this.bigBlind = this.cH.getBigBlind()*2; // @todo Bitte die Berechnung für BigBlind einfügen (Bigblind = Smallblind*2)
         this.currentPlayer = this.nextPlayerStack.pop(); // Ersten Spieler
+
 	}
 
 	public void startRound() {
@@ -86,20 +89,22 @@ public class Round {
 
     public void throwFlop(){
         if(!this.flopShown){
-          // @todo code um den FLOP anzuzeigen bzw. zu setzten
-            shownCards.add(new Card("2","hearts",2));
-            shownCards.add(new Card("3","hearts",3));
-            shownCards.add(new Card("3","hearts",3));
+          // @todo code um den FLOP anzuzeigen bzw. zu setzten (TableCards ist ein Array mit 5 Plätzen. Der Index wird entsprechend gesetzt)
+            this.shownCardsIndex = 2;
+
         }
     }
     public void  throwTurn(){
         if(!this.turnShown){
-          // @todo Code um den turn anzuzeigen
+          // @todo Code um den turn anzuzeigen()
+            this.shownCardsIndex = 3;
         }
     }
     public void throwRiver(){
         if(!this.riverShown){
-            // @todo Code um den River anzuzeigen
+            // @todo Code um den River anzuzeigen()
+            this.shownCardsIndex = 4;
+
         }
     }
 
@@ -148,26 +153,50 @@ public class Round {
     public Player getPlayerBefore(){
         return this.beforePlayerStack.peek();
     }
+
     public boolean canCurrentPlayerBet(){
-        return true; //@todo einbauen der Prüfung
+      //@todo einbauen der Prüfung(currentPlayer kann nicht bet wenn sein Chipsstand kleiner, gleich dem Bet vom Player befor ist)
+      //prüft ob der eigener Chips Stand geringer ist als der Bet vom Player befor
+      if(this.getPlayerBefore().getActualBet() >= this.getCurrentPlayer().getChipNumber()) {
+          return false;
+      }
+      return true;
     }
+
     public boolean canCurrentPlayerCheck(){
-        if (this.raisedPotThisRound){
+        //@todo einbauen der Pürfung(Checken nur möglich wenn der PlayerBefor auch gecheckt hat(Einstaz = 0))
+        if(this.getPlayerBefore().getActualBet() == 0){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean canCurrentPlayerRaise(){
+        //@todo einbauen der Pürfung(Raise ist nur möglich wenn der eigene Chipsstand doppelt so groß ist der Einsatz vom Player befor)
+        if(this.getPlayerBefore().getActualBet() < this.getCurrentPlayer().getChipNumber()*2){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean canCurrentPlayerCall(){
+        //@todo einbauen der Pürfung(Call ist nur möglich wenn der Chipsstand des akt. Spielers >= dem Bet des Players befor ist)
+        if(this.getPlayerBefore().getActualBet() < 0){
             return false;
         }
-        return true; //@todo einbauen der Pürfung
+        return true;
     }
-    public boolean canCurrentPlayerRaise(){
-        return true;//@todo einbauen der Pürfung
-    }
-    public boolean canCurrentPlayerCall(){
-        return true;//@todo einbauen der Pürfung
-    }
+
     public boolean canCurrentPlayerAllIn(){
-        return true;//@todo einbauen der Pürfung
+       //@todo einbauen der Pürfung(all in ist nur möglich wenn der currentPlayer an der Reihe ist. ABER dann immer)
+        if(this.getCurrentPlayer().getChipNumber() < 0){
+            return false;
+        }
+        return true;
     }
     public boolean canCurrentPlayerFold(){
-        return true;//@todo einbauen der Pürfung
+        //@todo einbauen der Pürfung(fold ist immer möglich)
+        return true;
     }
 
     /**
@@ -205,7 +234,7 @@ public class Round {
 		int sameRankCounter = 0;
 		int winnerSpotted = 0;
 		int high = 0;
-		System.out.println("############################################");
+		//System.out.println("############################################");
 		for (int i = p.length-1;i > 0; i--) {
 			if(p[i].getHandRank() > p[i-1].getHandRank()) {
 				p[i].setChipNumber(p[i].getChipNumber() + this.cH.getPot());

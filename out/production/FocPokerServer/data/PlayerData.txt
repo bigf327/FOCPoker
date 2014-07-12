@@ -1,0 +1,5 @@
+1;Fabian;20000;fabian
+2;Christoph;20000;christoph
+3;Oke;20000;oke
+4;JerryB;20000;jerryb
+5;Sebastian;20000;sebastian
