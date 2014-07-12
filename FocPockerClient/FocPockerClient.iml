@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="FocPokerCommon" />
+    <orderEntry type="module" module-name="FocPokerServer" />
     <orderEntry type="module" module-name="FocPokerCommon" />
   </component>
 </module>
